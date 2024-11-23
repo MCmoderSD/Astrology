@@ -3,7 +3,6 @@
 
 
 ## Description
-
 A utility for fetching daily astrology predictions.
 
 
