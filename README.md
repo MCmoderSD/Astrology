@@ -1,20 +1,31 @@
 # Astrology
+[![](https://jitpack.io/v/MCmoderSD/Astrology.svg)](https://jitpack.io/#MCmoderSD/Astrology)
+
 
 ## Description
 
 A utility for fetching daily astrology predictions.
 
+
 ## Usage
 
 ### Maven
+Make sure you have the JitPack repository added to your `pom.xml` file:
 ```xml
-<dependencies>
-    <dependency>
-        <groupId>de.MCmoderSD</groupId>
-        <artifactId>astrology</artifactId>
-        <version>1.0.0</version>
-    </dependency>
-</dependencies>
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+```
+Add the dependency to your `pom.xml` file: 
+```xml
+<dependency>
+    <groupId>com.github.MCmoderSD</groupId>
+    <artifactId>astrology</artifactId>
+    <version>1.0.0</version>
+</dependency>
 ```
 
 ### Usage Example
