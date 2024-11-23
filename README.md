@@ -22,7 +22,7 @@ Add the dependency to your `pom.xml` file:
 ```xml
 <dependency>
     <groupId>com.github.MCmoderSD</groupId>
-    <artifactId>astrology</artifactId>
+    <artifactId>Astrology</artifactId>
     <version>1.0.0</version>
 </dependency>
 ```
