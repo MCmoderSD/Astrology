@@ -23,13 +23,15 @@ Add the dependency to your `pom.xml` file:
 <dependency>
     <groupId>com.github.MCmoderSD</groupId>
     <artifactId>Astrology</artifactId>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
 </dependency>
 ```
 
 ### Usage Example
 ```java
-import de.MCmoderSD.astrology.ProkeralaAPI;
+import de.MCmoderSD.astrology.data.DailyPrediction;
+import de.MCmoderSD.astrology.enums.ZodiacSign;
+import de.MCmoderSD.astrology.manager.Astrology;
 
 import java.time.MonthDay;
 
@@ -37,21 +39,22 @@ public class Main {
 
     public static void main(String[] args) {
 
-        // Load the client ID and client secret
-        String clientId = "PROKERALA_CLIENT_ID";
-        String clientSecret = "PROKERALA_CLIENT_SECRET";
+        // Load the client ID and client secret (you can also use multiple clients)
+        String[] clientIds = new String[] {"YOUR_CLIENT_ID"};
+        String[] clientSecrets = new String[] {"YOUR_CLIENT_SECRET"};
 
-        // Create a new ProkeralaAPI instance
-        ProkeralaAPI api = new ProkeralaAPI(clientId, clientSecret);
+        // Initialize the API
+        Astrology api = new Astrology(clientIds, clientSecrets);
 
         // Get the daily horoscope for Aries
-        String horoscope = api.dailyPrediction(ProkeralaAPI.ZodiacSign.ARIES);
-        System.out.println(horoscope);
+        ZodiacSign zodiacSign = ZodiacSign.ARIES;
+        DailyPrediction horoscope = api.dailyPrediction(zodiacSign);
+        System.out.println(horoscope.getPrediction());
 
         // Get the daily horoscope for Taurus
         MonthDay date = MonthDay.of(5, 4);
         horoscope = api.dailyPrediction(date);
-        System.out.println(horoscope);
+        System.out.println(horoscope.getPrediction());
     }
 }
 ```
