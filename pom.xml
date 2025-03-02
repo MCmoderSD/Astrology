@@ -5,17 +5,17 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>de.MCmoderSD</groupId>
-    <artifactId>astrology</artifactId>
-    <version>1.1.0</version>
+    <artifactId>Astrology</artifactId>
+    <version>1.2.0</version>
 
     <name>Astrology</name>
     <description>A utility for fetching daily astrology predictions</description>
 
     <distributionManagement>
         <repository>
-            <id>Astrology</id>
-            <name>GitHub MCmoderSD Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/MCmoderSD/Astrology</url>
+            <id>Nexus</id>
+            <name>Sonatype Nexus</name>
+            <url>https://mcmodersd.de/nexus/repository/maven-releases/</url>
         </repository>
     </distributionManagement>
 
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.18.2</version>
+            <version>2.18.3</version>
         </dependency>
 
         <!-- Apache Commons -->
